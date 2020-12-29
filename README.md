@@ -6,9 +6,9 @@ Voice based personal assistants have gained a lot of popularity in this era of s
 
 
 BUT inorder to run the code successfully ,we need to indtall following python packages  
-pip install pyttsx3
-pip install speech recognization
-pip install wikipedia
-pip install datetime
-pip install pyjokes  #not necessary just for fun
-pip install pywhatkit
+pip install pyttsx3 
+pip install speech recognization  
+pip install wikipedia 
+pip install datetime  
+pip install pyjokes  #not necessary just for fun  
+pip install pywhatkit 
