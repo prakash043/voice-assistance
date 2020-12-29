@@ -1,14 +1,14 @@
 import speech_recognition as sr
-import pyttsx3
-import pywhatkit
-import datetime
-import wikipedia
-import pyjokes
+import pyttsx3  #text to speech conversion
+import pywhatkit   #to open browser,youtube...
+import datetime   #add date and time
+import wikipedia  #add data from wikipedia
+import pyjokes     #some random jokes
 
 listener = sr.Recognizer()
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[1].id)
+engine.setProperty('voice', voices[1].id) #to add voice
 
 
 def talk(text):
@@ -52,8 +52,11 @@ def run_alexa():
         talk('I am in a relationship with wifi')
     elif 'joke' in command:
         talk(pyjokes.get_joke())
+    elif 'stop talking' in command:
+        talk('ok thankyou')
+        exit(0)
     else:
-        talk('Please say the command again.')
+        talk(wikipedia.search(command))
 
 
 while True:
